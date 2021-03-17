@@ -1,12 +1,11 @@
 import Layout from "./components/Layout/Layout";
 import Toolbar from "./components/Toolbar/Toolbar";
-
+import "./App.css"
 function App() {
   return (
     <div className="App">
      <Layout>
-  
-       Pharmacy builder by Emirlan Dogdurbev
+      <h1> Pharmacy builder by Emirlan Dogdurbev</h1>
      </Layout>
  
     </div>

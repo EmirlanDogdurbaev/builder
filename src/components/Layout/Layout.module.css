@@ -1,4 +1,5 @@
 .Layout{
-    border: 5px solid rgb(177, 253, 253);
-  
+ background-color: rgb(196, 241, 255);
+ height: 1000px;
+ text-align: center;
 }

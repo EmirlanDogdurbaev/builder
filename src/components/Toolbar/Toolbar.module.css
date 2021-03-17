@@ -1,6 +1,12 @@
 .Toolbar{
     display: flex;
-    background-color: bisque;
-    margin-bottom: 10px;
-    
+    padding: 10px;
+    color: black;
+    margin-bottom: 15px;
+    background-color: rgb(196, 241, 255);
+    justify-content: space-between;
+    box-shadow: 0 0 10px rgb(17, 240, 147);
+    position: sticky;
+    top: 0;
+    left: 0;
 }
