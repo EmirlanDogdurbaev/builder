@@ -1,7 +1,14 @@
+import Layout from "./components/Layout/Layout";
+import Toolbar from "./components/Toolbar/Toolbar";
+
 function App() {
   return (
     <div className="App">
-     Awesome builder by Emirlan Dogdurbev
+     <Layout>
+  
+       Pharmacy builder by Emirlan Dogdurbev
+     </Layout>
+ 
     </div>
   );
 }
