@@ -1,5 +1,4 @@
 import Layout from "./components/Layout/Layout";
-import Toolbar from "./components/Toolbar/Toolbar";
 import "./App.css"
 function App() {
   return (
