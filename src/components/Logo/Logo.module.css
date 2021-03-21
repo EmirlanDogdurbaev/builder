@@ -1,5 +1,5 @@
-.Logo{
-    background-color: aqua;
-    border: solid 1.5px black;
-    padding: 5px 25px;
+.Logo img{
+   height: 3rem;
+   
+   margin: 0.5rem;
 }
