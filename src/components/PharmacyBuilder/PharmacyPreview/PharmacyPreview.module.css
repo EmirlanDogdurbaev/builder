@@ -1,6 +1,16 @@
 .PharmacyPreview{
-    border: 1px solid black;
-    width: 250px;
-    height: 400px;
-    background-color: rgb(23, 218, 88);
+    width: 650px;
+    background-color: rgb(41, 228, 212);
+
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-wrap:wrap;
 }
+.ingredients{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+   

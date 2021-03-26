@@ -1,9 +1,14 @@
 import classes from "./PharmacyControls.module.css";
 
-const PharmacyControls = () => {
+const PharmacyControls = ({ingredients}) => {
+  const results = [];
+  for (const ingredient in ingredients) {
+   results.push(ingredient);
+    }
+ 
     return (
       <div className={classes.PharmacyControls}>
-        <div></div>
+       {results}
       </div>
     );
   }

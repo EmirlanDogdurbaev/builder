@@ -1,10 +1,10 @@
 import classes from "./Logo.module.css";
-import logo from "../../images/logo.png";
+import logotip from "../../images/logotip.svg";
 
 const Logo = () => {
     return (
         <div className={classes.Logo}>
-            <img src={logo} alt="logo"></img>
+            <img src={logotip} alt="logo"></img>
         </div>
     );
 }

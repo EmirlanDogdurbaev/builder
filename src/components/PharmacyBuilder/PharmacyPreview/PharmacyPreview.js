@@ -11,9 +11,13 @@ const PharmacyPreview = ({ingredients}) => {
 
     return (
       <div className={classes.PharmacyPreview}>
-        {result}
+        <div 
+         className={classes.ingredients}>
+          {result}
+        </div>
       </div>
     );
   }
   
   export default PharmacyPreview;
+
