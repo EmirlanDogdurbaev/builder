@@ -1,16 +1,18 @@
+import PharmacyControl from "./PharmacyControl/PharmacyControl";
 import classes from "./PharmacyControls.module.css";
 
-const PharmacyControls = ({ingredients}) => {
-  const results = [];
+const PharmacyControls = ({ ingredients, addIngredient, removeIngredient }) => {
+  const result = [];
   for (const ingredient in ingredients) {
-   results.push(ingredient);
-    }
- 
-    return (
-      <div className={classes.PharmacyControls}>
-       {results}
-      </div>
+    result.push(
+      <PharmacyControl
+        type={ingredient}
+        addIngredient={addIngredient}
+        removeIngredient={removeIngredient}
+      />
     );
   }
-  
-  export default PharmacyControls;
+  return <div className={classes.PharmacyControls}>{result}</div>;
+};
+
+export default PharmacyControls;

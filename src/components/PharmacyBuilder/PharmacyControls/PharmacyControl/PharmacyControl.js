@@ -1,12 +1,14 @@
+import BunsIngredient from "../../Medicine/Medicine";
 import classes from "./PharmacyControl.module.css";
 
-const PharmacyControl = ({ ingredients }) => {
-    const result = [];
-    for (const ingredient in ingredients) {
-        result.push(<PharmacyControl />);
-    }
+const PharmacyControl = ({ type, addIngredient, removeIngredient }) => {
     return ( 
-        <div className = {classes.PharmacyControl}>{result}</div>
+        <div className = {classes.PharmacyControl}>
+            <button className = {classes.ControlButton} onClick = {() => removeIngredient(type)}>-</button>
+            <BunsIngredient type = {type} />
+            <button className = {classes.ControlButton} onClick = {() => addIngredient(type)}>+</button>
+        </div>
     );
 }
+ 
 export default PharmacyControl;
