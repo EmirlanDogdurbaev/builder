@@ -28,20 +28,20 @@ const Medicine2 = ({ type }) => {
     },
     loperamid: {
       backgroundImage: `url(${loperamid})`,
-      width: "60px",
-      height: "60px",
+      width: "30px",
+      height: "30px",
       margin: "10px 15px",
     },
     mezim: {
       backgroundImage: `url(${mezim})`,
-      width: "60px",
-      height: "60px",
+      width: "30px",
+      height: "30px",
       margin: "10px 15px",
     },
     lartoG: {
       backgroundImage: `url(${lartoG})`,
-      width: "60px",
-      height: "60px",
+      width: "30px",
+      height: "30px",
       margin: "10px 15px",
     },
   };
