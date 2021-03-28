@@ -9,6 +9,9 @@ const PharmacyBuilder = () => {
     askorbinka: 15,
     trimol : 21,
     dimidrol : 12,
+    lartoG : 1,
+    mezim: 1,
+    loperamid: 1,
   });
 
   function addIngredient(type) {
