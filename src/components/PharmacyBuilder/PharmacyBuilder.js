@@ -6,9 +6,9 @@ import {useState} from "react"
 
 const PharmacyBuilder = () => {
   const [ingredients, setIngredients] = useState({
-    askorbinka: 15,
-    trimol : 21,
-    dimidrol : 12,
+    askorbinka: 1,
+    trimol : 1,
+    dimidrol : 1,
     lartoG : 1,
     mezim: 1,
     loperamid: 1,
