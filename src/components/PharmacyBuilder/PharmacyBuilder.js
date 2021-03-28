@@ -27,7 +27,6 @@ const PharmacyBuilder = () => {
     setIngredients(newIngredients);
     }
   }
-
   return (
     <div className={classes.PharmacyBuilder}>
       <PharmacyPreview ingredients={ingredients} />
