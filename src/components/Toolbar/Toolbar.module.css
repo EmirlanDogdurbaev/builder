@@ -9,6 +9,7 @@
     color: white;
     background-color:  rgb(227, 244, 247);
     box-shadow: 0 0 10px rgb(17, 240, 147);
+    z-index: 2;
   }
   
   @media (max-width: 549px) {
