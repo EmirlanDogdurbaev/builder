@@ -3,6 +3,7 @@ import classes from "./PharmacyBuilder.module.css";
 import PharmacyControls from "./PharmacyControls/PharmacyControls";
 import PharmacyPreview from "./PharmacyPreview/PharmacyPreview";
 import axios from "axios";
+import Modal from "../UI/Modal/Modal";
 
 const PharmacyBuilder = () => {
   const prices = {
@@ -16,6 +17,7 @@ const PharmacyBuilder = () => {
 
   const [ingredients, setIngredients] = useState([]);
   const [price, setPrice] = useState(0);
+  const [ordering, setOrdering] = useState(false);
 
   useEffect(
     () => axios
@@ -44,6 +46,14 @@ const PharmacyBuilder = () => {
     }
   }
 
+  function startOrdering() {
+    setOrdering(true);
+  }
+
+  function stopOrdering() {
+    setOrdering(false);
+  }
+
   return (
     <div className={classes.PharmacyBuilder}>
       <PharmacyPreview ingredients={ingredients}
@@ -52,7 +62,12 @@ const PharmacyBuilder = () => {
         ingredients={ingredients}
         addIngredient={addIngredient}
         removeIngredient={removeIngredient}
+        startOrdering={startOrdering}
       />
+       <Modal
+            ingredients = {ingredients}
+                show={ordering}
+                cancel={stopOrdering}></Modal>
     </div>
   );
 };
