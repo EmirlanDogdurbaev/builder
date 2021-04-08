@@ -4,7 +4,7 @@ import trimol from "../../../images/trimol.svg";
 import dimidrol from "../../../images/dimidrol.svg";
 import loperamid from "../../../images/loperamid.svg";
 import mezim from "../../../images/mezim.svg"
-import lartoG from "../../../images/lartoG.svg"
+import laktoG from "../../../images/laktoG.svg"
 
 const Medicine2 = ({ type }) => {
   const types = {
@@ -38,8 +38,8 @@ const Medicine2 = ({ type }) => {
       height: "30px",
       margin: "10px 15px",
     },
-    lartoG: {
-      backgroundImage: `url(${lartoG})`,
+    laktoG: {
+      backgroundImage: `url(${laktoG})`,
       width: "30px",
       height: "30px",
       margin: "10px 15px",
