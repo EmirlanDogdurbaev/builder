@@ -3,7 +3,7 @@ import PharmacyControl from "./PharmacyControl/PharmacyControl";
 import Button from "../../UI/Backdrop/Button/Button";
 
 
-const PharmacyControls = ({addIngredient, removeIngredient }) => {
+const PharmacyControls = ({addIngredient, removeIngredient , startOrdering }) => {
   const result = [];
   const ingredients = [
     "loperamid",
@@ -25,7 +25,7 @@ const PharmacyControls = ({addIngredient, removeIngredient }) => {
   }
   return <div className={classes.PharmacyControls}>
     {result}
-    <Button disabled={!ingredients.length}>Order</Button>
+    <Button disabled={!ingredients.length}  onClick ={startOrdering} red >Order</Button>
     </div>;
 };
 
