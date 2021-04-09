@@ -12,13 +12,15 @@ const Modal = ({ show, children, cancel }) => {
       <Backdrop show={show} click={cancel} />
       <div className={classes.content} style={style}>
         {children}
-        <div>
-          <Button onClick={show} green>Checkout</Button>
-          <Button onClick={cancel}>Cancel</Button>
+        <div className={classes.content2}>
+          <Button onClick={show} green>
+            Checkout
+          </Button>
+          <Button onClick={cancel} red>Cancel</Button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Modal;
