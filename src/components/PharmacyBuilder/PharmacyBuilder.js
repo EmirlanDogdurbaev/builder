@@ -26,6 +26,7 @@ const PharmacyBuilder = () => {
         setPrice(response.data.price);
         setIngredients(Object.values(response.data.ingredients));
       }),
+
   []);
 
   function addIngredient(type) {
