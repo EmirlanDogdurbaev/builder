@@ -1,15 +1,22 @@
 .Toolbar {
-    display: flex;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     left: 0;
+    
   
     font-size: 2rem;
     color: white;
     background-color:  rgb(227, 244, 247);
     box-shadow: 0 0 10px rgb(17, 240, 147);
     z-index: 2;
+  }
+
+  .nav{
+    width: 905px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   @media (max-width: 549px) {
