@@ -25,7 +25,7 @@ const PharmacyControls = ({addIngredient, removeIngredient , startOrdering }) =>
   }
   return <div className={classes.PharmacyControls}>
     {result}
-    <Button disabled={!ingredients.length}  onClick ={startOrdering} red >Order</Button>
+    <Button disabled={!ingredients.length}  onClick ={startOrdering} aqua >Order</Button>
     </div>;
 };
 
