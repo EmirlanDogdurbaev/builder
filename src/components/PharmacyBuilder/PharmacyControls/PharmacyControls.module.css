@@ -2,9 +2,13 @@
     flex: 0 0 250px;
     border-radius: 1rem;
     padding: 1rem;
+    padding-top: 0;
     background-color: white;
     color: black;
     text-align: center;
+  }
+  strong{
+    font-size: 25px;
   }
 
   .order{
