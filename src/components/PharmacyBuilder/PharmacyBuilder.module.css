@@ -1,6 +1,5 @@
-.PharmacyBuilder{
+.PharmacyBuilder {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 1rem;
-}
+  }
