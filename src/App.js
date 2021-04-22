@@ -9,13 +9,13 @@ import "./App.css";
 const App = () => {
   return (
     <div className="App">
-    <Layout>
-    <Switch>
+     <Layout>
+        <Switch>
           <Route path="/" component={PharmacyBuilder} exact />
           <Route path="/checkout" component={Checkout} />
           <Redirect to="/" />
         </Switch>
-    </Layout>
+      </Layout>
        
     </div>
   );
