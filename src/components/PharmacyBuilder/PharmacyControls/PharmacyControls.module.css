@@ -1,6 +1,12 @@
-.PharmacyControls{
-    border: 1px solid black;
-    width: 350px;
-    
-    background-color: rgb(34, 171, 206);
-}
+.PharmacyControls {
+    flex: 0 0 250px;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    text-align: center;
+  }
+
+  .order{
+    background-color: turquoise;
+  }
