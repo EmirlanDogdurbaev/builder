@@ -1,19 +1,22 @@
-import Layout from "./components/Layout/Layout";
-import "./App.css"
+import Layout from "./components/Layout/Layout"
+import Checkout from "./components/Checkout/Checkout";
+
+import { Redirect, Route, Switch } from "react-router";
 import PharmacyBuilder from "./components/PharmacyBuilder/PharmacyBuilder";
-import PharmacyPreview from "./components/PharmacyBuilder/PharmacyPreview/PharmacyPreview";
-import PharmacyControls from "./components/PharmacyBuilder/PharmacyControls/PharmacyControls";
-function App() {
+
+import "./App.css";
+
+const App = () => {
   return (
     <div className="App">
-     <Layout>
-      <h1> Pharmacy builder by Emirlan Dogdurbev</h1>
-      <PharmacyBuilder >
-        <PharmacyPreview />
-        <PharmacyControls />
-      </PharmacyBuilder>
-     </Layout>
- 
+    <Layout>
+    <Switch>
+          <Route path="/" component={PharmacyBuilder} exact />
+          <Route path="/checkout" component={Checkout} />
+          <Redirect to="/" />
+        </Switch>
+    </Layout>
+       
     </div>
   );
 }
