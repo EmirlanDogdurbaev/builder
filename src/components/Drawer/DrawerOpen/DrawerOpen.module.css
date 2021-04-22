@@ -1,4 +1,3 @@
-  
 .DrawerOpen {
   height: 3rem;
   padding: .5rem;
@@ -11,7 +10,8 @@
 .DrawerOpen > div {
   height: 3px;
   width: 2rem;
-  background-color: white;
+  background-color: black;
+  
 }
 .DrawerOpen > div:not(:last-child) {
   margin-bottom: .5rem;
