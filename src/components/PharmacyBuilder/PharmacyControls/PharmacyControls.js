@@ -24,7 +24,7 @@ const PharmacyControls = ({
   return (
     <div className={classes.PharmacyControls}>
      
-      <strong>Ingredients</strong>
+      <strong>Medical</strong>
       {results}
       <Button disabled={!total} onClick={startOrdering} order>Order</Button>
     </div>
