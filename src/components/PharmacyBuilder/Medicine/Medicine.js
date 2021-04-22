@@ -3,50 +3,60 @@ import askorbinka from "../../../images/askorbinka.svg";
 import trimol from "../../../images/trimol.svg";
 import dimidrol from "../../../images/dimidrol.svg";
 import loperamid from "../../../images/loperamid.svg";
-import mezim from "../../../images/mezim.svg";
-import laktoG from "../../../images/laktoG.svg";
-import React from "react";
+import mezim from "../../../images/mezim.svg"
+import laktoG from "../../../images/laktoG.svg"
 
 const Medicine = ({ type }) => {
   const types = {
-    loperamid: {
-      backgroundImage: `url(${loperamid})`,
-      width: "60px",
-      height: "60px",
-      margin: "10px 15px",
-      backgroundSize:"cover",
-    },
     askorbinka: {
       backgroundImage: `url(${askorbinka})`,
-      width: "60px",
-      height: "60px",
-      margin: "10px 15px",
+      width: "40px",
+      height: "40px",
+      margin: "15px",
+      padding: "5px",
     },
     trimol: {
       backgroundImage: `url(${trimol})`,
-      width: "60px",
-      height: "60px",
-      margin: "10px 15px",
+      width: "40px",
+      height: "40px",
+      margin: "15px",
+      padding: "5px",
     },
     dimidrol: {
       backgroundImage: `url(${dimidrol})`,
-      width: "60px",
-      height: "60px",
-      margin: "10px 15px",
+      width: "40px",
+      height: "40px",
+      margin: "15px",
+      padding: "5px",
+    },
+    loperamid: {
+      backgroundImage: `url(${loperamid})`,
+      width: "40px",
+      height: "40px",
+      margin: "15px",
+      padding: "5px",
     },
     mezim: {
       backgroundImage: `url(${mezim})`,
-      width: "60px",
-      height: "60px",
-      margin: "10px 15px",
+      width: "40px",
+      height: "40px",
+      margin: "15px",
+      padding: "5px",
     },
     laktoG: {
       backgroundImage: `url(${laktoG})`,
-      width: "60px",
-      height: "60px",
-      margin: "10px 15px",
+      width: "40px",
+      height: "40px",
+      margin: "15px",
+      padding: "5px",
     },
   };
-  return <div className={classes.Medicine} style={types[type]}></div>;
+
+
+
+  return (
+    <div className={classes.Medicine }  style={types[type]}></div>
+  );
 };
-export default React.memo(Medicine);
+export default Medicine;
+
