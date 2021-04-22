@@ -1,15 +1,18 @@
-import Button from "../../../UI/Backdrop/Button/Button";
-import Medicine2 from "../../Medicine2/Medicine2";
+
+import Button from "../../../UI/Button/Button";
+import Medicine from "../../Medicine/Medicine";
 import classes from "./PharmacyControl.module.css";
 
-const PharmacyControl = ({ type, addIngredient, removeIngredient }) => {
+const PharmacyControl = ({ type, add, remove, count }) => {
   return (
     <div className={classes.PharmacyControl}>
-      <Button onClick={() => removeIngredient(type)}>-</Button>
-      <Medicine2 type={type} />
-      <Button onClick={() => addIngredient(type)}>+</Button>
+      <Button onClick={() => add(type)}>+</Button>
+      <div className={classes.ingredient}>
+        <Medicine type={type} />
+      </div>
+      <Button onClick={() => remove(type)} disabled={!count}>-</Button>
     </div>
   );
-};
+}
 
 export default PharmacyControl;
