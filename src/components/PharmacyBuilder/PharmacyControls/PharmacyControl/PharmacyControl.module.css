@@ -1,24 +1,10 @@
-.PharmacyControl{
+.PharmacyControl {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-}
-.PharmacyControl div{
-   margin: 0 1rem;
-   transform: translateY(5px);
-}
-.PharmacyControl button{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 5px;
-    font-size: 22px;
-    color: black;
-    margin: 5px ;
-    font-weight: bold;
-}
-.PharmacyControl button:hover{
-    background-color: rgb(19, 212, 77);
-    color: greenyellow;
-    cursor: pointer;
-}
-
+    align-items: center;
+    margin: .5rem 0;
+  }
+  .PharmacyControl .ingredient div {
+    position: static;
+    margin: 0 .5rem;
+  }
