@@ -8,3 +8,8 @@
     position: static;
     margin: 0 .5rem;
   }
+
+  .ingredient{
+    margin: 15px;
+    padding: 15px;
+  }

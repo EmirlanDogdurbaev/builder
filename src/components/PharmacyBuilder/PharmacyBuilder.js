@@ -62,8 +62,8 @@ const PharmacyBuilder = ({ history }) => {
       ingredients: ingredients,
       price: price,
       address: "Shopokova kv 4",
-      phone:"0707379480",
-      name:"Keremet Kerimova",
+      phone:"0707379480", 
+      name:"Dogdurbaev Emirlan",
     })
     .then(() =>{
       setOrdering(false);

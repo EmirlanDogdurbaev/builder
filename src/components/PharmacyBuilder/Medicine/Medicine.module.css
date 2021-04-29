@@ -1,4 +1,11 @@
-  
+
 .Medicine {
-    background-size: cover;
-  }
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 20px;
+  background-size: cover;
+  display: flex;
+
+ /* padding-left: -40px; */
+ 
+}
