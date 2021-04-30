@@ -7,11 +7,12 @@
 .Logo{
    display: flex;
    align-items: center;
-   flex-direction: column;
-   align-content: center;
-   font-size: 25px;
+ align-items: center;
+   font-size: 30px;
    color: black;
 
 
-   padding:  15px 0;
+   padding-top: 15px;
+   padding-bottom: 15px;
+   padding-left: 15px;
 }
