@@ -1,8 +1,9 @@
 
 .Medicine {
   position: absolute;
-  margin-top: 10px;
-  margin-left: 20px;
+  padding: 10px;
+  margin-left: 10px;
+ 
   background-size: cover;
   display: flex;
 
