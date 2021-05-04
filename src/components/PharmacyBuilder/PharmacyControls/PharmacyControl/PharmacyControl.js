@@ -1,16 +1,18 @@
-
+import { useDispatch } from "react-redux";
 import Button from "../../../UI/Button/Button";
-import Medicine from "../../Medicine/Medicine";
+import Medicine2 from "../../Medicine2/Medicine2";
+
 import classes from "./PharmacyControl.module.css";
 
-const PharmacyControl = ({ type, add, remove, count }) => {
+const PharmacyControl = ({type , count}) => {
+  const dispatch = useDispatch();
   return (
     <div className={classes.PharmacyControl}>
-      <Button onClick={() => add(type)}>+</Button>
+       <Button onClick={() => dispatch({ type: "ADD_INGREDIENT", ingredient: type })}>+</Button>
       <div className={classes.ingredient}>
-        <Medicine type={type} />
+        <Medicine2 type={type} />
       </div>
-      <Button onClick={() => remove(type)} disabled={!count}>-</Button>
+      <Button onClick={() => dispatch({ type: "REMOVE_INGREDIENT", ingredient: type })} disabled={!count}>-</Button>
     </div>
   );
 }
