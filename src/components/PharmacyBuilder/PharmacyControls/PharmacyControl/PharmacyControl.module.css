@@ -6,10 +6,10 @@
   }
   .PharmacyControl .ingredient div {
     position: static;
-    margin: 0 .5rem;
+    margin: 0 10px;
   }
 
   .ingredient{
-    margin: 15px;
-    padding: 15px;
+    margin: 5px;
+    padding: 5px;
   }

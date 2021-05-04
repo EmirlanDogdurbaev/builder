@@ -1,42 +1,29 @@
  .PharmacyPreview {
   flex: 0 0 400px;
-  display: flex;
-  flex-wrap: wrap;
   margin-bottom: 1rem;
-  justify-content: center;
-
 }
-.korobka {
+.medical {
   width: 400px;
-  height: 400px;
+
   margin-right: 1rem;
   margin-bottom: 1rem;
-  background-size: cover;
-  border:5px solid white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  border-radius: 5px;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.ingredients {
-  width: 380px;
-  height: 380px;
-  border-radius: 5px;
-  position: relative;
+  border-radius: 2%;
+  background-color: #f5f5f5;
 
-  
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  flex-direction: row;
+
 }
 .price {
-  display: inline;
-width: 200px;
-height: 50px;
-padding: 10px;
-padding-top: 15px;
-vertical-align: center;
-border-radius: 15px;
-color: black;
-background-color: rgb(255, 152, 133);
-font-weight: bold;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
 }
+
