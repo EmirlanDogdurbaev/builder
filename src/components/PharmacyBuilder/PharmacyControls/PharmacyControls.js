@@ -4,8 +4,6 @@ import classes from "./PharmacyControls.module.css";
 
 const PharmacyControls = ({
   ingredients,
-  addIngredient,
-  removeIngredient,
   startOrdering,
   type
 }) => {
@@ -15,15 +13,12 @@ const PharmacyControls = ({
     total += ingredients[ingredient];
     results.push(<PharmacyControl
         key={ingredient}
-        add={addIngredient}
-        remove={removeIngredient}
         count={ingredients[ingredient]}
         type={ingredient} />)
   }
 
   return (
     <div className={classes.PharmacyControls}>
-     
       <strong>Medical</strong>
       {results}
       <Button disabled={!total} onClick={startOrdering} order>Order</Button>
@@ -32,3 +27,4 @@ const PharmacyControls = ({
 }
 
 export default PharmacyControls;
+
