@@ -6,46 +6,52 @@ import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useSelector } from "react-redux";
+
 
 const PharmacyBuilder = ({ history }) => {
   const prices = {
-    askorbinka: 15,
-    trimol:12,
-    dimidrol:14,
-    loperamid:17,
-    mezim:19,
-    laktoG:21,
+    vitA : 1,
+    vitB : 1,
+    vitC : 1,
+
   };
-  const [ingredients, setIngredients] = useState({});
-  const [price, setPrice] = useState(0);
+  const ingredients = useSelector(state => state.ingredients);
+  const price = useSelector(state => state.price);
   const [ordering, setOrdering] = useState(false);
-
-  useEffect(loadDefaults, []);
-
-  function loadDefaults() {
-    axios
-      .get('https://builder-8c2e1-default-rtdb.firebaseio.com/default.json')
-      .then(response => {
-        setPrice(response.data.price);
-        setIngredients(response.data.ingredients);
-      });
-  }
 
   function addIngredient(type) {
     const newIngredients = { ...ingredients };
     newIngredients[type]++;
-    setPrice(price + prices[type]);
-    setIngredients(newIngredients);
-  }
+    // setIngredients(newIngredients);
+    // setPrice(price + prices[type]);
+};
 
-  function removeIngredient(type) {
-    if (ingredients[type]) {
+function removeIngredient(type) {
+  if (ingredients[type]) {
       const newIngredients = { ...ingredients };
       newIngredients[type]--;
-      setPrice(price - prices[type]);
-      setIngredients(newIngredients);
-    }
+      // setIngredients(newIngredients);
+      // setPrice(price - prices[type]);
   }
+}
+
+
+
+
+
+
+  // useEffect(loadDefaults, []);
+
+  // function loadDefaults() {
+  //   axios
+  //     .get('https://builder-8c2e1-default-rtdb.firebaseio.com/default.json')
+  //     .then(response => {
+  //       setPrice(response.data.price);
+  //       setIngredients(response.data.ingredients);
+  //     });
+  // }
+
 
  
   function startOrdering() {
@@ -61,13 +67,13 @@ const PharmacyBuilder = ({ history }) => {
     .post('https://builder-8c2e1-default-rtdb.firebaseio.com/orders.json',{
       ingredients: ingredients,
       price: price,
-      address: "Shopokova kv 4",
-      phone:"0707379480", 
+      address: "Kadyrova 108/6",
+      phone:"0500023120", 
       name:"Dogdurbaev Emirlan",
     })
     .then(() =>{
       setOrdering(false);
-      loadDefaults();
+      // loadDefaults();
       history.push('/checkout')
     })
   }
@@ -79,8 +85,6 @@ const PharmacyBuilder = ({ history }) => {
         price={price} />
       <PharmacyControls
         ingredients={ingredients}
-        addIngredient={addIngredient}
-        removeIngredient={removeIngredient}
         startOrdering={startOrdering}
         />
       <Modal
@@ -99,3 +103,5 @@ const PharmacyBuilder = ({ history }) => {
 }
 
 export default PharmacyBuilder;
+
+  
