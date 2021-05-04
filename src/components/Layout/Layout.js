@@ -12,7 +12,6 @@ const Layout = ({children}) => {
       <Toolbar openDrawer={() => setDrawerOpen(true)} />
       <Drawer open={drawerOpen} closeDrawer={() => setDrawerOpen(false)} />
       <main>
-       <p>Pharmacy builder by Emirlan Dogdurbaev</p> 
       {children}
       </main>
     </div>
