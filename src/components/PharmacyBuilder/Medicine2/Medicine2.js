@@ -1,61 +1,55 @@
 import classes from "./Medicine2.module.css";
-import askorbinka from "../../../images/askorbinka.svg";
-import trimol from "../../../images/trimol.svg";
-import dimidrol from "../../../images/dimidrol.svg";
-import loperamid from "../../../images/loperamid.svg";
-import mezim from "../../../images/mezim.svg"
-import laktoG from "../../../images/laktoG.svg"
+import vitA from "../../../images/vitA.svg";
+import vitC from "../../../images/vitC.svg";
+import vitB from "../../../images/vitB.svg";
+import vitD from "../../../images/vitD.svg";
+import vitE from "../../../images/vitE.svg";
+import vitK from "../../../images/vitK.svg";
+import React from "react";
 
 const Medicine2 = ({ type }) => {
   const types = {
-    askorbinka: {
-      backgroundImage: `url(${askorbinka})`,
-      width: "40px",
-      height: "40px",
-      margin: "15px",
-      padding: "5px",
+    vitA: {
+      backgroundImage: `url(${vitA})`,
+      width: "50px",
+      height: "50px",
+      backgroundSize: "cover",
     },
-    trimol: {
-      backgroundImage: `url(${trimol})`,
-      width: "40px",
-      height: "40px",
-      margin: "15px",
-      padding: "5px",
+    vitB: {
+      backgroundImage: `url(${vitB})`,
+      width: "50px",
+      height: "50px",
+      backgroundSize: "cover",
     },
-    dimidrol: {
-      backgroundImage: `url(${dimidrol})`,
-      width: "40px",
-      height: "40px",
-      margin: "15px",
-      padding: "5px",
+    vitC: {
+      backgroundImage: `url(${vitC})`,
+      width: "50px",
+      height: "50px",
+      backgroundSize: "cover",
     },
-    loperamid: {
-      backgroundImage: `url(${loperamid})`,
-      width: "40px",
-      height: "40px",
-      margin: "15px",
-      padding: "5px",
+    vitD:{
+      backgroundImage: `url(${vitD})`,
+          width: "50px",
+          height: "50px",
+          backgroundSize: "cover",
     },
-    mezim: {
-      backgroundImage: `url(${mezim})`,
-      width: "40px",
-      height: "40px",
-      margin: "15px",
-      padding: "5px",
+    vitE:{
+      backgroundImage: `url(${vitE})`,
+          width: "50px",
+          height: "50px",
+          backgroundSize: "cover",
     },
-    laktoG: {
-      backgroundImage: `url(${laktoG})`,
-      width: "40px",
-      height: "40px",
-      margin: "15px",
-      padding: "5px",
-    },
-  };
-
-
+    vitK:{
+      backgroundImage: `url(${vitK})`,
+          width: "50px",
+          height: "50px",
+          backgroundSize: "cover",
+    }
+  }
 
   return (
-    <div className={classes.Medicine2 }  style={types[type]}></div>
+    <div className={classes.Medicine2 }  style={types[type] }></div>
   );
 };
-export default Medicine2;
+export default React.memo(Medicine2)
+
