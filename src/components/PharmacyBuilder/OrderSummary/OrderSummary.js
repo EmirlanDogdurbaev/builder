@@ -2,18 +2,18 @@ import classes from "./OrderSummary.module.css";
 
 const OrderSummary = ({ ingredients, price }) => {
   const labels = {
-    askorbinka: "askorbinka",
-    dimidrol: "dimidrol",
-    laktoG: "laktoG",
-    loperamid: "loperamid",
-    mezim: "mezim",
-    trimol: "trimols",
+    vitA: "Vitamin A ",
+    vitB: "Vitamin B ",
+    vitC: "Vitamin C ",
+    vitD: "Vitamin D",
+    vitE: "Vitamin E ",
+    vitK: "Vitamin K ",
   }
   console.log(ingredients)
   const results = Object.keys(ingredients)
-  .map(type =>
-     <li>{labels[type]}: {ingredients[type]}</li>);
-  
+    .map(type =>
+      <li>{labels[type]}: {ingredients[type]}</li>);
+
 
   return (
     <div className={classes.OrderSummary}>
