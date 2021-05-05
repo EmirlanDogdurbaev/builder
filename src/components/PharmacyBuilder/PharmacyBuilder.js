@@ -10,12 +10,12 @@ import { useSelector } from "react-redux";
 
 
 const PharmacyBuilder = ({ history }) => {
-  const prices = {
-    vitA : 1,
-    vitB : 1,
-    vitC : 1,
+  // const prices = {
+  //   vitA : 1,
+  //   vitB : 1,
+  //   vitC : 1,
 
-  };
+  // };
   const ingredients = useSelector(state => state.ingredients);
   const price = useSelector(state => state.price);
   const [ordering, setOrdering] = useState(false);
