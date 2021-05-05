@@ -4,7 +4,7 @@ import PharmacyPreview from "./PharmacyPreview/PharmacyPreview";
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 
@@ -19,25 +19,6 @@ const PharmacyBuilder = ({ history }) => {
   const ingredients = useSelector(state => state.ingredients);
   const price = useSelector(state => state.price);
   const [ordering, setOrdering] = useState(false);
-
-  function addIngredient(type) {
-    const newIngredients = { ...ingredients };
-    newIngredients[type]++;
-    // setIngredients(newIngredients);
-    // setPrice(price + prices[type]);
-};
-
-function removeIngredient(type) {
-  if (ingredients[type]) {
-      const newIngredients = { ...ingredients };
-      newIngredients[type]--;
-      // setIngredients(newIngredients);
-      // setPrice(price - prices[type]);
-  }
-}
-
-
-
 
 
 
