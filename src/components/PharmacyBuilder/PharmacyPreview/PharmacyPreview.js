@@ -1,33 +1,21 @@
 import Medicine from "../Medicine/Medicine";
-import classes from "./PharmacyPreview.module.css";
-import shelf from "../../../images/shelf.svg";
 
-const PharmacyPreview = ({ ingredients, price }) => {
+import classes from "./PharmacyPreview.module.css";
+
+const PharmacyPreview = ({ medicals, price }) => {
   const result = [];
-  for (const ingredient in ingredients) {
-    for (let i = 0; i < ingredients[ingredient]; i++) {
-      result.push(<Medicine key={ingredient + i} type={ingredient} />);
+  for (const medical in medicals) {
+    for (let i = 0; i < medicals[medical]; i++) {
+      result.push(<Medicine key={medical + i} type={medical} />);
     }
   }
 
   return (
     <div className={classes.PharmacyPreview}>
-      <div
-        className={classes.shelf}
-        style={{
-          backgroundImage: `url(${shelf})`,
-          backgroundSize: "cover",
-          width: "350px",
-          height: "120px",
-        }}
-      ></div>
-      <div>
-        <div className={classes.container}>{result}</div>
+      <div className={classes.cont}>
+        <div className={classes.medicals}>{result}</div>
       </div>
-
-      <div>
-        <div className={classes.price}> {price.toFixed(1)} som</div>
-      </div>
+      <div className={classes.price}>{price}som</div>
     </div>
   );
 };
