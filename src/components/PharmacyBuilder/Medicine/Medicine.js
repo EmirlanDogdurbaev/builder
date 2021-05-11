@@ -27,29 +27,26 @@ const Medicine = ({ type }) => {
       height: "50px",
       backgroundSize: "cover",
     },
-vitD:{
-  backgroundImage: `url(${vitD})`,
+    vitD: {
+      backgroundImage: `url(${vitD})`,
       width: "50px",
       height: "50px",
       backgroundSize: "cover",
-},
-vitE:{
-  backgroundImage: `url(${vitE})`,
+    },
+    vitE: {
+      backgroundImage: `url(${vitE})`,
       width: "50px",
       height: "50px",
       backgroundSize: "cover",
-},
-vitK:{
-  backgroundImage: `url(${vitK})`,
+    },
+    vitK: {
+      backgroundImage: `url(${vitK})`,
       width: "50px",
       height: "50px",
       backgroundSize: "cover",
-}
-  }
+    },
+  };
 
-  return (
-    <div className={classes.Medicine }  style={types[type] }></div>
-  );
+  return <div className={classes.Medicine} style={types[type]}></div>;
 };
-export default React.memo(Medicine)
-
+export default React.memo(Medicine);
