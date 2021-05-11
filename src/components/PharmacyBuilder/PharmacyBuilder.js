@@ -1,40 +1,38 @@
-import classes from "./PharmacyBuilder.module.css";
-import PharmacyControls from "./PharmacyControls/PharmacyControls";
 import PharmacyPreview from "./PharmacyPreview/PharmacyPreview";
+import PharmacyControls from "./PharmacyControls/PharmacyControls";
+
+import classes from "./PharmacyBuilder.module.css";
+import { useEffect, useState } from "react";
+import axios from "../../axios";
 import Modal from "../UI/Modal/Modal";
 import OrderSummary from "./OrderSummary/OrderSummary";
 import Button from "../UI/Button/Button";
-import {  useState } from "react";
-import axios from "axios";
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import { load } from "../../store/actions/builder";
+import withAxios from "../withAxios";
 
 const PharmacyBuilder = ({ history }) => {
-  // const prices = {
-  //   vitA : 1,
-  //   vitB : 1,
-  //   vitC : 1,
-
-  // };
-  const ingredients = useSelector(state => state.ingredients);
-  const price = useSelector(state => state.price);
+  const dispatch = useDispatch();
+  const medicals = useSelector((state) => state.builder.medicals);
+  console.log(medicals);
+  const price = useSelector((state) => state.builder.price);
   const [ordering, setOrdering] = useState(false);
 
-
-
-  // useEffect(loadDefaults, []);
+  useEffect(() => dispatch(load()), []);
 
   // function loadDefaults() {
   //   axios
-  //     .get('https://builder-8c2e1-default-rtdb.firebaseio.com/default.json')
+  //     .get('https://builder-a51d0-default-rtdb.firebaseio.com/default.json')
   //     .then(response => {
   //       setPrice(response.data.price);
-  //       setIngredients(response.data.ingredients);
+
+  //       // For arrays
+  //       // setIngredients(Object.values(response.data.medicals));
+  //       // For objects
+  //       setIngredients(response.data.medicals);
   //     });
   // }
 
-
- 
   function startOrdering() {
     setOrdering(true);
   }
@@ -44,45 +42,24 @@ const PharmacyBuilder = ({ history }) => {
   }
 
   function finishOrdering() {
-    axios
-    .post('https://builder-8c2e1-default-rtdb.firebaseio.com/orders.json',{
-      ingredients: ingredients,
-      price: price,
-      address: "Kadyrova 108/6",
-      phone:"0500023120", 
-      name:"Dogdurbaev Emirlan",
-    })
-    .then(() =>{
-      setOrdering(false);
-      // loadDefaults();
-      history.push('/checkout')
-    })
+    setOrdering(false);
+    // loadDefaults();
+    history.push("/checkout");
   }
 
   return (
     <div className={classes.PharmacyBuilder}>
-      <PharmacyPreview
-        ingredients={ingredients}
-        price={price} />
-      <PharmacyControls
-        ingredients={ingredients}
-        startOrdering={startOrdering}
-        />
-      <Modal
-        show={ordering}
-        cancel={stopOrdering}>
-        <OrderSummary
-          ingredients={ingredients}
-          price={price}
-            />
-          <Button onClick={finishOrdering} green>Checkout</Button>
+      <PharmacyPreview medicals={medicals} price={price} />
+       <PharmacyControls medicals={medicals} startOrdering={startOrdering} />
+        <Modal show={ordering} cancel={stopOrdering}>
+          <OrderSummary medicals={medicals} price={price} />
+          <Button onClick={finishOrdering} green="green">
+            Checkout
+          </Button>
           <Button onClick={stopOrdering}>Cancel</Button>
         </Modal>
-        
     </div>
   );
-}
+};
 
-export default PharmacyBuilder;
-
-  
+export default withAxios(PharmacyBuilder, axios);
