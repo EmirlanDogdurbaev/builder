@@ -1,5 +1,3 @@
-
-
 import DrawerOpen from "../Drawer/DrawerOpen/DrawerOpen";
 import classes from "./Toolbar.module.css";
 import Nav from "../Nav/Nav";
@@ -15,7 +13,6 @@ const Toolbar = ({ openDrawer }) => {
       <DrawerOpen click={openDrawer} />
     </div>
   );
-}
+};
 
 export default Toolbar;
-
