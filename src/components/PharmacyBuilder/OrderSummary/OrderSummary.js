@@ -1,6 +1,6 @@
 import classes from "./OrderSummary.module.css";
 
-const OrderSummary = ({ ingredients, price }) => {
+const OrderSummary = ({ medicals, price }) => {
   const labels = {
     vitA: "Vitamin A ",
     vitB: "Vitamin B ",
@@ -8,22 +8,20 @@ const OrderSummary = ({ ingredients, price }) => {
     vitD: "Vitamin D",
     vitE: "Vitamin E ",
     vitK: "Vitamin K ",
-  }
-  console.log(ingredients)
-  const results = Object.keys(ingredients)
-    .map(type =>
-      <li>{labels[type]}: {ingredients[type]}</li>);
-
+  };
+  const results = Object.keys(medicals).map((type) => (
+    <li key={type}>
+      {labels[type]}: {medicals[type]}
+    </li>
+  ));
 
   return (
     <div className={classes.OrderSummary}>
       <h3>Order summary</h3>
-      <ul>
-        {results}
-      </ul>
-      <strong>Total price: {price.toFixed(1)} som</strong>
+      <ul>{results}</ul>
+      <strong>{price} som</strong>
     </div>
   );
-}
+};
 
 export default OrderSummary;
