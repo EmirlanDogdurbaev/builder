@@ -1,20 +1,23 @@
 import { useDispatch } from "react-redux";
+import { add, remove } from "../../../../store/actions/builder";
 import Button from "../../../UI/Button/Button";
-import Medicine2 from "../../Medicine2/Medicine2";
-
+import Medicine from "../../Medicine/Medicine";
 import classes from "./PharmacyControl.module.css";
 
-const PharmacyControl = ({type , count}) => {
+const PharmacyControl = ({ type, count }) => {
   const dispatch = useDispatch();
+
   return (
     <div className={classes.PharmacyControl}>
-       <Button onClick={() => dispatch({ type: "ADD_INGREDIENT", ingredient: type })}>+</Button>
+      <Button onClick={() => dispatch(add(type))}>+</Button>
       <div className={classes.ingredient}>
-        <Medicine2 type={type} />
+        <Medicine type={type} fixed />
       </div>
-      <Button onClick={() => dispatch({ type: "REMOVE_INGREDIENT", ingredient: type })} disabled={!count}>-</Button>
+      <Button onClick={() => dispatch(remove(type))} disabled={!count}>
+        -
+      </Button>
     </div>
   );
-}
+};
 
 export default PharmacyControl;
