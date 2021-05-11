@@ -1,30 +1,26 @@
 import Button from "../../UI/Button/Button";
-import PharmacyControl from "./PharmacyControl/PharmacyControl"
+import PharmacyControl from "./PharmacyControl/PharmacyControl";
 import classes from "./PharmacyControls.module.css";
 
-const PharmacyControls = ({
-  ingredients,
-  startOrdering,
-  type
-}) => {
+const PharmacyControls = ({ medicals, startOrdering }) => {
   const results = [];
   let total = 0;
-  for (const ingredient in ingredients) {
-    total += ingredients[ingredient];
-    results.push(<PharmacyControl
-        key={ingredient}
-        count={ingredients[ingredient]}
-        type={ingredient} />)
+  for (const medical in medicals) {
+    total += medicals[medical];
+    results.push(
+      <PharmacyControl key={medical} count={medicals[medical]} type={medical} />
+    );
   }
 
   return (
     <div className={classes.PharmacyControls}>
-      <strong>Medical</strong>
+      <strong>Medicals</strong>
       {results}
-      <Button disabled={!total} onClick={startOrdering} order>Order</Button>
+      <Button disabled={!total} onClick={startOrdering}>
+        Order
+      </Button>
     </div>
   );
-}
+};
 
 export default PharmacyControls;
-
