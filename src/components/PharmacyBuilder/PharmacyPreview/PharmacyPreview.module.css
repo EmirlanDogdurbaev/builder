@@ -1,32 +1,38 @@
-.PharmacyPreview {
+.PharmacyPreview{
   flex: 0 0 400px;
   margin-bottom: 1rem;
-  align-content: center;
-}
-
-.cont {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
-  flex-direction: row;
-  background-color: #f5f5f5;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  width: 400px;
+  justify-content: center;
+  align-items: center;
 }
 .medicals {
-  align-items: center;
-  width: 400px;
   display: flex;
   flex-wrap: wrap;
   margin: 5px;
   padding: 18px;
 }
 .price {
-  background-color: whitesmoke;
-  border-radius: 1rem;
-  padding: 0 1rem;
-  font-size: 1.5rem;
+  background-color:#c0bebe;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center;
   color: black;
-  font-weight: bold;
+  font-size: 22px;
+  padding: 10px 20px;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+.shelf{
+  background-size: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    flex: 1 1 auto;
+    margin-bottom: 70px;
+}
+.plantFlex {
+  display: flex;
+  flex-wrap: wrap;
+  
 }
