@@ -1,17 +1,16 @@
-import PharmacyPreview from "./PharmacyPreview/PharmacyPreview";
-import PharmacyControls from "./PharmacyControls/PharmacyControls";
-
-import classes from "./PharmacyBuilder.module.css";
 import { useEffect, useState } from "react";
 import axios from "../../axios";
-import Modal from "../UI/Modal/Modal";
-import OrderSummary from "./OrderSummary/OrderSummary";
-import Button from "../UI/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { load } from "../../store/actions/builder";
 import withAxios from "../withAxios";
+import PharmacyPreview from "../PharmacyBuilder/PharmacyPreview/PharmacyPreview";
+import PharmacyControls from "../PharmacyBuilder/PharmacyControls/PharmacyControls";
+import Modal from "../UI/Modal/Modal";
+import OrderSummary from "../PharmacyBuilder/OrderSummary/OrderSummary";
+import Button from "../UI/Button/Button";
+import classes from "./PainkillersBuilder.module.css";
 
-const PharmacyBuilder = ({ history }) => {
+const PainkillersBuilder = ({ history }) => {
   const dispatch = useDispatch();
   const medicals = useSelector((state) => state.builder.medicals);
   console.log(medicals);
@@ -48,7 +47,7 @@ const PharmacyBuilder = ({ history }) => {
   }
 
   return (
-    <div className={classes.PharmacyBuilder}>
+    <div className={classes.PainkillersBuilder}>
       <PharmacyPreview medicals={medicals} price={price} />
        <PharmacyControls medicals={medicals} startOrdering={startOrdering} />
         <Modal show={ordering} cancel={stopOrdering}>
@@ -62,4 +61,4 @@ const PharmacyBuilder = ({ history }) => {
   );
 };
 
-export default withAxios(PharmacyBuilder, axios);
+export default withAxios(PainkillersBuilder, axios);

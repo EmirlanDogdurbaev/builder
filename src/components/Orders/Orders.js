@@ -11,7 +11,7 @@ const Orders = () => {
   const orders = useSelector((state) => state.orders);
 
   useEffect(() => {
-    dispatch(load());}, []);
+    dispatch(load());}, [dispatch]);
 
   const results = orders.map((order) => <Order key={order.id} {...order} />);
 
