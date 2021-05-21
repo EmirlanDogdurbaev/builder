@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import withAxios from "../withAxios";
 
 const Checkout = ({ history }) => {
+  const { token, id } = useSelector(state => state.auth);
   const medicals = useSelector((state) => state.builder.medicals);
   const price = useSelector((state) => state.builder.price);
 
@@ -17,12 +18,13 @@ const Checkout = ({ history }) => {
     const data = new FormData(event.target);
 
     axios
-      .post("/orders.json", {
+      .post('/orders.json?auth=' + token,{
         name: data.get("name"),
         address: data.get("address"),
         phone: data.get("phone"),
         medicals: medicals,
         price: price,
+        userId: id
       })
       .then((response) => {
         history.replace("/");

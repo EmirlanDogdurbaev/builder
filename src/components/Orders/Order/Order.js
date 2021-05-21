@@ -3,7 +3,7 @@ import classes from "./Order.module.css";
 const Order = ({ name, phone, address, medicals, price }) => {
   const outputMedicals = Object.keys(medicals).map((medical) => (
     <em key={medical}>
-      {medical} - {medicals[medical]}
+      {medical}-{medicals[medical]} 
     </em>
   ));
 

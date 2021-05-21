@@ -13,28 +13,25 @@ import withAxios from "../withAxios";
 
 const PharmacyBuilder = ({ history }) => {
   const dispatch = useDispatch();
+  const isAuthenticated = useSelector(state => state.auth.token !== null);
   const medicals = useSelector((state) => state.builder.medicals);
-  console.log(medicals);
   const price = useSelector((state) => state.builder.price);
   const [ordering, setOrdering] = useState(false);
 
+  const [filling, setFilling] = useState("");
+  function switchFilling(fillingBun) {
+    setFilling(fillingBun);
+  }
+
   useEffect(() => dispatch(load()), [dispatch]);
 
-  // function loadDefaults() {
-  //   axios
-  //     .get('https://builder-a51d0-default-rtdb.firebaseio.com/default.json')
-  //     .then(response => {
-  //       setPrice(response.data.price);
-
-  //       // For arrays
-  //       // setIngredients(Object.values(response.data.medicals));
-  //       // For objects
-  //       setIngredients(response.data.medicals);
-  //     });
-  // }
-
   function startOrdering() {
-    setOrdering(true);
+    if (isAuthenticated) {
+      setOrdering(true);
+    }
+    else {
+      history.push('./auth');
+    }
   }
 
   function stopOrdering() {
@@ -46,18 +43,22 @@ const PharmacyBuilder = ({ history }) => {
     // loadDefaults();
     history.push("/checkout");
   }
-
   return (
     <div className={classes.PharmacyBuilder}>
       <PharmacyPreview medicals={medicals} price={price} />
-       <PharmacyControls medicals={medicals} startOrdering={startOrdering} />
-        <Modal show={ordering} cancel={stopOrdering}>
-          <OrderSummary medicals={medicals} price={price} />
-          <Button onClick={finishOrdering} green="green">
-            Checkout
-          </Button>
-          <Button onClick={stopOrdering}>Cancel</Button>
-        </Modal>
+      <PharmacyControls
+        filling={filling}
+        switchFilling={switchFilling}
+        medicals={medicals}
+        startOrdering={startOrdering}
+      />
+      <Modal show={ordering} cancel={stopOrdering}>
+        <OrderSummary medicals={medicals} price={price} />
+        <Button onClick={finishOrdering} green="green">
+          Checkout
+        </Button>
+        <Button onClick={stopOrdering}>Cancel</Button>
+      </Modal>
     </div>
   );
 };

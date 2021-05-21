@@ -1,0 +1,14 @@
+.Switch{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ max-width: 200px;
+ font-size: 15px;
+}
+.inp{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 200px;
+  
+}

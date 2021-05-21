@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 .medicals {
   display: flex;
@@ -20,7 +20,7 @@
   color: black;
   font-size: 22px;
   padding: 10px 20px;
-  margin-bottom: 2rem;
+  margin-top: 15px;
   border-radius: 10px;
 }
 .shelf{
@@ -29,7 +29,6 @@
     flex-wrap: wrap;
     width: 400px;
     flex: 1 1 auto;
-    margin-bottom: 70px;
 }
 .plantFlex {
   display: flex;

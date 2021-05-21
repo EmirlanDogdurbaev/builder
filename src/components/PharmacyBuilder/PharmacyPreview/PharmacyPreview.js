@@ -14,7 +14,8 @@ const PharmacyPreview = ({ medicals, price }) => {
     <div className={classes.PharmacyPreview}>
         <div
           className={classes.shelf}
-          style={{ backgroundImage: `url(${shelf})` }}>
+           style={{ backgroundImage: `url(${shelf})` }}
+          >
            <div>
               <div className={classes.plantFlex}>{result}</div>
           </div>

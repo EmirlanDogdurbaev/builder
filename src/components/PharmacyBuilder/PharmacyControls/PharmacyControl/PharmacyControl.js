@@ -6,7 +6,6 @@ import classes from "./PharmacyControl.module.css";
 
 const PharmacyControl = ({ type, count }) => {
   const dispatch = useDispatch();
-
   return (
     <div className={classes.PharmacyControl}>
       <Button onClick={() => dispatch(add(type))}>+</Button>
