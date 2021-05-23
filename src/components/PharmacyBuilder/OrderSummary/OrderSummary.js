@@ -8,18 +8,31 @@ const OrderSummary = ({ medicals, price }) => {
     vitD: "Vitamin D",
     vitE: "Vitamin E ",
     vitK: "Vitamin K ",
+    vitAF1: "Aspirin ",
+    vitBF1: "Paracetamol",
+    vitCF1: "Analgenium ",
+    vitDF1: "Ketonal",
+    vitEF1: "Citramon",
+    vitKF1: "Dimidrol ",
+    vitAF2: "Aminofen ",
+    vitBF2: "Ery",
+    vitCF2: "Busfar",
+    vitDF2: "Ibuprofen",
+    vitEF2: "Kineret",
+    vitKF2: "Mapap",
   };
-  const results = Object.keys(medicals).map((type) => (
-    <li key={type}>
+  const results = Object.keys(medicals).map((type, id) => (
+    <li key={id} style={{fontSize:"20px"}}>
       {labels[type]}: {medicals[type]}
     </li>
   ));
 
+
   return (
     <div className={classes.OrderSummary}>
       <h3>Order summary</h3>
-      <ul>{results}</ul>
-      <strong>{price} som</strong>
+      <ul style={{fontSize:"20px", height:"200px", display:"flex", flexWrap:"wrap", flexDirection:"column"}}>{results}</ul>
+      <strong>Total price: {price.toFixed(1)} som</strong>
     </div>
   );
 };

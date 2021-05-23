@@ -31,7 +31,7 @@ const Switch = ({ switchFilling }) => {
   );
 
   return (
-    <div className={classes.SwitchBun}>
+    <div className={classes.Switch}>
       <div className={classes.inp}>
         <label htmlFor="F1">Fill-1</label>
         {inpF1}

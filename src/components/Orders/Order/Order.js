@@ -8,12 +8,15 @@ const Order = ({ name, phone, address, medicals, price }) => {
   ));
 
   return (
-    <div className={classes.Order}>
-      <div>
-        {name}, {phone}, {address}
+    <div className={classes.Order} style={{ display:"flex",
+    flexDirection:"column",width:"350px", height:"400px", backgroundColor:"lightGray" , fontSize:"20px", borderRadius:"15px"}}>
+      <div >
+      <h1>{name}</h1>
+       <stong style={{fontWeight:"900",fontSize:"25px"}}>{phone}</stong>
+       <p style={{fontWeight:"900",fontSize:"25px"}}>{address}</p>
       </div>
       <div>{outputMedicals}</div>
-      <strong>{price}</strong>
+      <strong style={{marginTop:"15px"}}>{price} som</strong>
     </div>
   );
 };

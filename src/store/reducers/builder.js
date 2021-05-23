@@ -11,6 +11,12 @@ const prices = {
   vitD: 5,
   vitE: 5,
   vitK: 5,
+  vitAF1: 5,
+  vitBF1: 5,
+  vitCF1: 5,
+  vitDF1:5,
+  vitEF1: 5,
+  vitKF1: 5
 };
 
 const builder = (state = initialState, action) => {
