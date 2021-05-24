@@ -33,15 +33,15 @@ const Switch = ({ switchFilling }) => {
   return (
     <div className={classes.Switch}>
       <div className={classes.inp}>
-        <label htmlFor="F1">Fill-1</label>
+        <label htmlFor="F1">p-kill</label>
         {inpF1}
       </div>
       <div className={classes.inp}>
-        <label htmlFor="none">Fill-none</label>
+        <label htmlFor="none">vit</label>
         {inpNoN}
       </div>
       <div className={classes.inp}>
-        <label htmlFor="F2">Fill-2</label>
+        <label htmlFor="F2">flu</label>
         {inpF2}
       </div>
     </div>

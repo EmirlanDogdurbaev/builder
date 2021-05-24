@@ -1,5 +1,4 @@
-  
-import React, { useState } from "react";
+
 import axios from "../../axios";
 import { start, auth } from "../../store/actions/auth";
 import withAxios from "../withAxios";
@@ -10,7 +9,6 @@ import { Redirect, useLocation } from "react-router-dom";
 
 export default withAxios(() => {
   const dispatch = useDispatch();
-  const [ method, setMethod ] = useState(null);
   const { loading, error, token } = useSelector(state => state.auth);
   const location = useLocation();
 
@@ -18,6 +16,8 @@ export default withAxios(() => {
     start(dispatch);
 
     const data = new FormData(event.target);
+    const method = event.nativeEvent.submitter.innerText === "Sign in"
+      ? "signin" : "signup";
     auth(dispatch, method, data.get('email'), data.get('password'));
 
     event.preventDefault();
@@ -26,12 +26,12 @@ export default withAxios(() => {
   let formOutput = "Loading...";
   if (!loading) {
     formOutput = (
-      <form onSubmit={formSubmitted}>
+      <form onSubmit={formSubmitted} className={classes.Auth}>
         <h1>Welcome</h1>
         <input type="email" placeholder="E-mail" name="email" required />
-        <input type="password" placeholder="Password" name="password" required minLength="6" />
-        <Button click={() => setMethod('signin')} green>Sign in</Button>
-        <Button click={() => setMethod('signup')} red>Sign up</Button>
+        <input type="password" placeholder="Password" name="password" required minLength="6"  />
+        <Button style={{margin:"5px",backgroundColor:"green" , fontSize:"20px" , fontWeight:"500", padding:"5px 20px"}}>Sign in</Button>
+        <Button  style={{margin:"5px",backgroundColor:"green" , fontSize:"20px" , fontWeight:"500", padding:"5px 20px"}}>Sign up</Button>
       </form>
     );
   }
@@ -44,7 +44,7 @@ export default withAxios(() => {
   const [,redirect] = location.search.split('?');
   let redirectOutput = null;
   if (token !== null) {
-    redirectOutput = <Redirect to={"/" + redirect ? redirect : ""} />;
+    redirectOutput = <Redirect to={"/" + redirect ? redirect : "/"} />;
   }
 
   return (
