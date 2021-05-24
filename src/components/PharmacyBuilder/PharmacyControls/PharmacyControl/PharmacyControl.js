@@ -8,7 +8,7 @@ const PharmacyControl = ({ type, count }) => {
   const dispatch = useDispatch();
   return (
     <div className={classes.PharmacyControl}>
-      <Button onClick={() => dispatch(add(type))}>+</Button>
+      <Button onClick={() => dispatch(add(type))} >+</Button>
       <div className={classes.ingredient}>
         <Medicine type={type} fixed />
       </div>

@@ -30,7 +30,7 @@ const PharmacyControls = ({
     <div className={classes.PharmacyControls}>
       <Switch switchFilling={switchFilling} />
       {results}
-      <Button disabled={!total} onClick={startOrdering} glave="true">
+      <Button disabled={!total} onClick={startOrdering} glave="true" >
         Order
       </Button>
     </div>
