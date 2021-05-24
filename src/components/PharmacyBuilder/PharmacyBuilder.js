@@ -18,11 +18,6 @@ const PharmacyBuilder = ({ history }) => {
   const price = useSelector((state) => state.builder.price);
   const [ordering, setOrdering] = useState(false);
 
-  const [filling, setFilling] = useState("");
-  function switchFilling(fillingBun) {
-    setFilling(fillingBun);
-  }
-
   useEffect(() => dispatch(load()), [dispatch]);
 
   function startOrdering() {
@@ -47,8 +42,6 @@ const PharmacyBuilder = ({ history }) => {
     <div className={classes.PharmacyBuilder}>
       <PharmacyPreview medicals={medicals} price={price} />
       <PharmacyControls
-        filling={filling}
-        switchFilling={switchFilling}
         medicals={medicals}
         startOrdering={startOrdering}
       />

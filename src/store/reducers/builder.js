@@ -14,15 +14,15 @@ const prices = {
   vitAF1: 5,
   vitBF1: 5,
   vitCF1: 5,
-  vitDF1:5,
+  vitDF1: 5,
   vitEF1: 5,
   vitKF1: 5,
   vitAF2: 5,
   vitBF2: 5,
   vitCF2: 5,
-  vitDF2:5,
+  vitDF2: 5,
   vitEF2: 5,
-  vitKF2: 5
+  vitKF2: 5,
 };
 
 const builder = (state = initialState, action) => {

@@ -1,7 +1,15 @@
 .PharmacyBuilder {
-    display: flex;
-    justify-content: space-evenly;
-    
-    flex-wrap: wrap;
-    margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+@media (max-width: 770px) {
+  .PharmacyBuilder {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
   }
+}
