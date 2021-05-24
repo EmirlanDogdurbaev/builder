@@ -30,8 +30,9 @@ export default withAxios(() => {
         <h1>Welcome</h1>
         <input type="email" placeholder="E-mail" name="email" required />
         <input type="password" placeholder="Password" name="password" required minLength="6"  />
-        <Button style={{margin:"5px",backgroundColor:"green" , fontSize:"20px" , fontWeight:"500", padding:"5px 20px"}}>Sign in</Button>
+    
         <Button  style={{margin:"5px",backgroundColor:"green" , fontSize:"20px" , fontWeight:"500", padding:"5px 20px"}}>Sign up</Button>
+        <Button style={{margin:"5px",backgroundColor:"green" , fontSize:"20px" , fontWeight:"500", padding:"5px 20px"}}>Sign in</Button>
       </form>
     );
   }
