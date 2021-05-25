@@ -35,3 +35,18 @@
   flex-wrap: wrap;
   
 }
+
+@media (max-width:780px) {
+  .PharmacyPreview{
+    display: flex;
+    flex-direction: column;
+  }
+  .shelf{
+    background-size: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      width: 400px;
+      flex: 1 1 auto;
+  }
+}
