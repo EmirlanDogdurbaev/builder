@@ -20,8 +20,8 @@ const Order = ({ name, phone, address, medicals, price }) => {
         borderRadius: "15px",
       }}
     >
-      <div style={{width:"250px" , textAlign:"center", margin:"0 auto"}}>
-        <div style={{textAlign:"left"}}>
+      <div style={{ width: "250px", textAlign: "center", margin: "0 auto" }}>
+        <div style={{ textAlign: "left" }}>
           <h1 style={{ margin: "0", marginBottom: "10px", marginTop: "10px" }}>
             {name}
           </h1>
@@ -36,11 +36,20 @@ const Order = ({ name, phone, address, medicals, price }) => {
           >
             {address}
           </p>
-        
-        <div style={{ display: "flex", flexDirection: "column" , marginBottom:"15px" , color:"black",fontWeight: "700" , listStylePosition:"initial"}}>
-          {outputMedicals}
-        </div>
-        <strong style={{ marginTop: "15px" }}>{price} som</strong>
+
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              marginBottom: "15px",
+              color: "black",
+              fontWeight: "700",
+              listStylePosition: "initial",
+            }}
+          >
+            {outputMedicals}
+          </div>
+          <strong style={{ marginTop: "15px" }}>{price} som</strong>
         </div>
       </div>
     </div>
