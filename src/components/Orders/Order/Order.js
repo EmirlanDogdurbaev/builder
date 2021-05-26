@@ -20,15 +20,29 @@ const Order = ({ name, phone, address, medicals, price }) => {
         borderRadius: "15px",
       }}
     >
-      <div>
-        <h1>{name}</h1>
-        <stong style={{ fontWeight: "900", fontSize: "25px" }}>{phone}</stong>
-        <p style={{ fontWeight: "900", fontSize: "25px" , margin:"0", marginBottom:"5px"}}>{address}</p>
+      <div style={{width:"250px" , textAlign:"center", margin:"0 auto"}}>
+        <div style={{textAlign:"left"}}>
+          <h1 style={{ margin: "0", marginBottom: "10px", marginTop: "10px" }}>
+            {name}
+          </h1>
+          <stong style={{ fontWeight: "900", fontSize: "25px" }}>{phone}</stong>
+          <p
+            style={{
+              fontWeight: "900",
+              fontSize: "25px",
+              margin: "0",
+              marginBottom: "5px",
+            }}
+          >
+            {address}
+          </p>
+        
+        <div style={{ display: "flex", flexDirection: "column" , marginBottom:"15px" , color:"black",fontWeight: "700" , listStylePosition:"initial"}}>
+          {outputMedicals}
+        </div>
+        <strong style={{ marginTop: "15px" }}>{price} som</strong>
+        </div>
       </div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        {outputMedicals}
-      </div>
-      <strong style={{ marginTop: "15px" }}>{price} som</strong>
     </div>
   );
 };
