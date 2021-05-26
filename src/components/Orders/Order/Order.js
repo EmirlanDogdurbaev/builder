@@ -21,11 +21,11 @@ const Order = ({ name, phone, address, medicals, price }) => {
       }}
     >
       <div style={{ width: "250px", textAlign: "center", margin: "0 auto" }}>
-        <div style={{ textAlign: "left" }}>
+        <div >
           <h1 style={{ margin: "0", marginBottom: "10px", marginTop: "10px" }}>
             {name}
           </h1>
-          <stong style={{ fontWeight: "900", fontSize: "25px" }}>{phone}</stong>
+          <strong style={{ fontWeight: "900", fontSize: "25px" }}>{phone}</strong>
           <p
             style={{
               fontWeight: "900",
