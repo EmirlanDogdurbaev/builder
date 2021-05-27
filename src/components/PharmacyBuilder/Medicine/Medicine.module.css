@@ -48,6 +48,20 @@
   }
 }
 
+@media (max-width:395px) {
+  .Medicine{
+    display: flex;
+    margin-bottom: 5px;
+    margin-top: 1.01rem;
+    margin-left: 20px;
+    margin-right: 6px;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    background-size: "cover";
+  }
+}
+
 @media (max-width:380px) {
   .Medicine{
     display: flex;
