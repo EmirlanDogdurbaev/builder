@@ -42,11 +42,18 @@
     flex-direction: column;
   }
   .shelf{
-    background-size: auto;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      width: 400px;
-      flex: 1 1 auto;
+    width: 350px;
+    background-size: 350px;
+  }
+}
+
+@media (max-width:350px) {
+  .PharmacyPreview{
+    display: flex;
+    flex-direction: column;
+  }
+  .shelf{
+    width: 250px;
+    background-size: 250px;
   }
 }

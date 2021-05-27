@@ -16,7 +16,7 @@
 }
 
 
-@media (max-width:549px) {
+@media (max-width:769px) {
   .Toolbar nav {
     display: none;
     padding: 0;

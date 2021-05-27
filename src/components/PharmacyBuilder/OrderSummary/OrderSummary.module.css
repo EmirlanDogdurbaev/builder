@@ -2,3 +2,22 @@
   text-align: left;
   content: none;
 }
+h3{
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:400px) {
+  .OrderSummary{
+    font-size: 18px;
+  }
+
+  .OrderSummary>ul{
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+
+  strong{
+    margin-top: 10px;
+  }
+}

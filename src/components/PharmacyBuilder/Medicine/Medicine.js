@@ -12,41 +12,22 @@ const Medicine = ({ type }) => {
   const types = {
     vitA: {
       backgroundImage: `url(${vitA})`,
-      width: "50px",
-      height: "50px",
-      backgroundSize: "cover",
-    } ,
+    },
     vitB: {
       backgroundImage: `url(${vitB})`,
-      width: "50px",
-      height: "50px",
-      backgroundSize: "cover",
     },
     vitC: {
       backgroundImage: `url(${vitC})`,
-      width: "50px",
-      height: "50px",
-      backgroundSize: "cover",
     },
     vitD: {
       backgroundImage: `url(${vitD})`,
-      width: "50px",
-      height: "50px",
-      backgroundSize: "cover",
     },
     vitE: {
       backgroundImage: `url(${vitE})`,
-      width: "50px",
-      height: "50px",
-      backgroundSize: "cover",
     },
     vitK: {
       backgroundImage: `url(${vitK})`,
-      width: "50px",
-      height: "50px",
-      backgroundSize: "cover",
     },
-
   };
 
   return <div className={classes.Medicine} style={types[type]}></div>;

@@ -31,8 +31,9 @@ const OrderSummary = ({ medicals, price }) => {
   return (
     <div className={classes.OrderSummary}>
       <h3>Order summary</h3>
-      <ul style={{fontSize:"20px", height:"200px", display:"flex", flexWrap:"wrap", flexDirection:"column"}}>{results}</ul>
-      <strong>Total price: {price.toFixed(1)} som</strong>
+      <ul style={{height:"180px", display:"flex", flexWrap:"wrap", flexDirection:"column"}}>
+        <li>{results}</li></ul>
+      <strong style={{marginTop:"50px"}}> {price.toFixed(1)} som</strong>
     </div>
   );
 };
