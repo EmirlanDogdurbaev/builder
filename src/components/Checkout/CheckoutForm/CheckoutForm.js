@@ -4,7 +4,7 @@ import classes from "./CheckoutForm.module.css";
 const CheckoutForm = ({ cancelCallback, submitCallback }) => {
   return (
     <form className={classes.CheckoutForm} onSubmit={submitCallback}>
-      <div>
+      <div className={classes.Center}>
         <label htmlFor="name">Name</label>
         <input type="text" name="name" id="name" required />
       </div>
@@ -22,8 +22,8 @@ const CheckoutForm = ({ cancelCallback, submitCallback }) => {
           pattern="0[0-9]{9}"
         />
       </div>
-      <Button>Checkout</Button>
-      <Button onClick={cancelCallback}>Cancel</Button>
+      <Button style={{margin:"10px", backgroundColor:"green"}}>Checkout</Button>
+      <Button onClick={cancelCallback} style={{margin:"10px"}}>Cancel</Button>
     </form>
   );
 };

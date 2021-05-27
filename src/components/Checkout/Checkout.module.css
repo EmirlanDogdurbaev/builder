@@ -1,15 +1,36 @@
 .Checkout {
     flex-direction: column;
     align-items: center;
-    width: 420px;
+    align-content: center;
+    width: 400px;
     margin: 0 auto;
   } 
 
   
-@media (max-width: 770px) {
+@media (max-width: 780px) {
   .Checkout {
     flex-direction: column;
     align-items: center;
     align-content: center;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 760px) {
+  .Checkout {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 340px;
+  }
+}
+
+@media (max-width: 330px) {
+  .Checkout {
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 250px;
   }
 }
