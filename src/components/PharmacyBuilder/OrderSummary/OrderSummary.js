@@ -22,18 +22,25 @@ const OrderSummary = ({ medicals, price }) => {
     vitKF2: "Mapap",
   };
   const results = Object.keys(medicals).map((type, id) => (
-    <li key={id} style={{fontSize:"20px"}}>
+    <li key={id} style={{ fontSize: "20px" }}>
       {labels[type]}: {medicals[type]}
     </li>
   ));
 
-
   return (
     <div className={classes.OrderSummary}>
       <h3>Order summary</h3>
-      <ul style={{height:"180px", display:"flex", flexWrap:"wrap", flexDirection:"column"}}>
-        <li>{results}</li></ul>
-      <strong style={{marginTop:"50px"}}> {price.toFixed(1)} som</strong>
+      <ul
+        style={{
+          height: "150px",
+          display: "flex",
+          flexWrap: "wrap",
+          flexDirection: "column",
+        }}
+      >
+        {results}
+      </ul>
+      <strong style={{ marginTop: "50px" }}> {price.toFixed(1)} som</strong>
     </div>
   );
 };

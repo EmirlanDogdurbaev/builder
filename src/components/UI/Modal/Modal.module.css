@@ -18,3 +18,44 @@
     height: 370px;
   }
 }
+
+@media (max-width: 770px) {
+  .content {
+    width: 80%;
+    left: 10%;
+    height: 350px;
+  }
+}
+
+@media (max-width: 550px) {
+  .content {
+    width: 80%;
+    left: 10%;
+    height: 340px;
+  }
+}
+
+@media (max-width: 420px) {
+  .content {
+    width: 80%;
+    left: 10%;
+    height: 310px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content {
+    width: 80%;
+    left: 10%;
+    height: 320px;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .content {
+    width: 80%;
+    left: 10%;
+    height: 350px;
+  }
+}
